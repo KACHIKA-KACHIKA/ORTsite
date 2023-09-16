@@ -1,0 +1,49 @@
+.header{
+	text-align: center;
+	color: #3dc053;
+}
+.navbar-maintext{
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333; /* Цвет текста */
+	margin-left: 10%;
+
+	font-family: Tahoma;
+	font-weight: bold;
+}
+body, html {
+	margin: 0;
+	padding: 0;
+}
+.container{
+	padding: 1%;
+	width: 100%;
+	height: 30%;
+	background-color: #7ACD72;
+	display: flex; /* Используем flex-контейнер */
+}
+/* Стили для кнопки "Toggle" на мобильных устройствах */
+.navbar-toggler {
+	display: none;
+}
+
+/* Стили для элементов навигации */
+.nav-item {
+	margin-right: 40px;
+	display: inline-block;
+}
+
+/* Стили для ссылок */
+.nav-link {
+	text-decoration: none;
+	color: #3aa24b; /* Цвет текста */
+	font-family: Tahoma;
+	font-weight:normal;
+	transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+/* Стили для ссылок при наведении */
+.nav-link:hover {
+	color: #4df2d9; /* Изменение цвета при наведении */
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/serverpart/static/css/navbar-styles.css">
+	
+	<title>Решение ОРТ</title>
+</head>
+<body>
+			<div class="container">
+
+					<a class="navbar-maintext" href="{% url 'home' %}">
+							<span>Сайт для решения ОРТ</span>
+					</a>
+
+					<button class="navbar-toggler" type="button" id="toggleButton"></button>
+									{% if user.is_authenticated %}
+											<li class="nav-item"> <a class="nav-link">{{ request.user.username }}</a> </li> <!--Имя пользователя-->
+
+											
+											<li class="nav-item">
+                        <form method="POST" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link">Logout</button>
+                        </form>
+                    </li>
+									{% else %}
+							
+											<li class="nav-item"> <a class="nav-link" href="{% url 'signup' %}">Sign Up</a> </li>
+
+											<li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li>
+							
+									{% endif %}
+			</div>
+</body>
+	{% block content %}
+
+	{% endblock %}
+</body>
+</html>

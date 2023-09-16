@@ -1,0 +1,10 @@
+back-end:
+	! sql - create db, connect
+	3 pages: main page -> creation test page <-> test page
+	function with test parameters: type of task, count of tasks, timer etc.
+	hardest! : server client part
+front-end:
+	common part: moodboard(fonts, colors, text size), header(name, sign up button)
+	main page: main text, test creation button, information
+	test cration page: test type choice, count of task, timer checkbox
+	test page: task text display endless list
